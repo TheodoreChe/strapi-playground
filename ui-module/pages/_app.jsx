@@ -7,7 +7,7 @@ const App = ({ Component, pageProps, apollo }) => {
     return (
         <ApolloProvider client={apollo}>
             <Head>
-                <title>Strapi Playground</title>
+                <title>strapi Playground</title>
             </Head>
             <Component {...pageProps} />
         </ApolloProvider>
