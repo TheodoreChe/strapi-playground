@@ -8,9 +8,11 @@ const Home = () => (
       <Query query={MESSAGES}>
         {
           ({ data: { messages } }) => messages.map(msg => (
-              <Link href={{ pathname: "message", query: { id: msg.id} }}>
-                  {msg.title}
-              </Link>
+              <p>
+                  <Link href={{ pathname: "message", query: { id: msg.id} }}>
+                      {msg.title}
+                  </Link>
+              </p>
           ))
         }
       </Query>

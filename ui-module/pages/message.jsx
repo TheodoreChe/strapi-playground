@@ -11,7 +11,11 @@ const Message = () => {
                 ({ data: { message } }) => (
                     <div>
                         <h1>{message.title}</h1>
-                        <img src={process.env.API_URL + message.image.url} alt />
+                        {
+                            message.image && (
+                                <img src={'http://localhost:1337'+ message.image.url} alt />
+                            )
+                        }
                         <p>
                             <ReactMarkdown source={message.content}/>
                         </p>
