@@ -1,10 +1,23 @@
 import gql from "graphql-tag";
 
 export const MESSAGES = gql`
-    query Message {
+    query Messages {
         messages {
             id
             title
+        }
+    }
+`;
+
+export const MESSAGE = gql`
+    query Messages($id: ID!) {
+        message(id: $id) {
+            id
+            title
+            content
+            image {
+                url
+            }
         }
     }
 `;

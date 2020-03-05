@@ -1,2 +1,2 @@
 
-export { MESSAGES } from './queries';
+export { MESSAGES, MESSAGE } from './queries';
